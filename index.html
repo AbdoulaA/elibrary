@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js"></script>
     <link
       rel="icon"
       type="image/x-icon"
@@ -29,10 +30,25 @@
               <li class="nav__link">
                 <a href="#landing" class="hover">Home</a>
               </li>
-              <li class="nav__link"><a href="" class="hover">Contact</a></li>
+              <li class="nav__link">
+                <a href="" class="hover no-cursor">Contact</a>
+              </li>
               <li class="nav__link">
                 <a href="#features" class="hover prio">Books</a>
               </li>
+            </ul>
+          </div>
+          <button class="btn__menu" onclick="openMenu()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <ul class="menu__list">
+              <li class="menu__link--list"><a href="#landing" class="menu__link" onclick="closeMenu()">Home</a></li>
+              <li class="menu__link--list"><a href="#features" class="menu__link" onclick="closeMenu()">Books</a></li>
+              <li class="menu__link--list"><a href="" class="menu__link no-cursor" onclick="closeMenu()">Contact</a></li>
             </ul>
           </div>
         </nav>
@@ -62,14 +78,14 @@
         <div class="container">
           <div class="row">
             <h2 class="section__title">
-              Why Library of <span>Alexandria</span>?
+              Why Library of <br> <span>Alexandria</span>?
             </h2>
             <div class="highlight__wrapper">
               <div class="highlight">
                 <i class="fa-solid fa-clock-rotate-left highlight__img"></i>
                 <h3 class="highlight__title">Experience the History</h3>
                 <p class="highlight__subtitle">
-                  Discover the thousands of years of Egyptian history 
+                  Discover the thousands of years of Egyptian history
                 </p>
               </div>
 
@@ -146,9 +162,7 @@
                     alt=""
                   />
                 </figure>
-                <h3 class="book__title">
-                  Be Obsessed or be Average
-                </h3>
+                <h3 class="book__title">Be Obsessed or be Average</h3>
                 <div class="book__rating">
                   <i class="fa-solid fa-star star"></i>
                   <i class="fa-solid fa-star star"></i>
@@ -238,9 +252,7 @@
                     alt=""
                   />
                 </figure>
-                <h3 class="book__title">
-                  The 5-Second Rule
-                </h3>
+                <h3 class="book__title">The 5-Second Rule</h3>
                 <div class="book__rating">
                   <i class="fa-solid fa-star star"></i>
                   <i class="fa-solid fa-star star"></i>
@@ -321,9 +333,7 @@
                     alt=""
                   />
                 </figure>
-                <h3 class="book__title">
-                  Can't Hurt Me
-                </h3>
+                <h3 class="book__title">Can't Hurt Me</h3>
                 <div class="book__rating">
                   <i class="fa-solid fa-star star"></i>
                   <i class="fa-solid fa-star star"></i>
@@ -364,7 +374,7 @@
         <div class="container">
           <div class="row">
             <h2 class="end__title">Explore more <span>Books</span></h2>
-            <a href=""><h2 class="header__button">Browse books</h2></a>
+            <a href="#features"><h2 class="header__button">Browse books</h2></a>
           </div>
         </div>
       </section>
@@ -379,9 +389,9 @@
           </div>
           <div class="footer__links">
             <ul class="footer__list">
-              <li><a class="footer__link" href="">Home</a></li>
-              <li><a class="footer__link" href="">About</a></li>
-              <li><a class="footer__link" href="">Books</a></li>
+              <li><a class="footer__link" href="#landing">Home</a></li>
+              <li><a class="footer__link" href="#highlights">About</a></li>
+              <li><a class="footer__link" href="#features">Books</a></li>
               <li><a class="footer__link" href="">Contact</a></li>
             </ul>
           </div>

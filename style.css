@@ -345,3 +345,163 @@ footer {
     display: flex;
     justify-content: space-between;
 }
+
+
+
+/* MENU RESPONSIVE  */
+
+.btn__menu {
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 8px;
+    display: none;
+}
+
+.fa-xmark {
+    color: #fff3d9;
+}
+
+.fa-xmark::after .menu__backdrop {
+    display: none;
+}
+
+.btn__menu:hover {
+    cursor: pointer;
+}
+
+.no-cursor {
+    cursor: no-drop;
+}
+
+.menu__backdrop {
+    position: absolute;
+    background-color: #6d1c34;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 200ms ease;
+}
+
+.menu__link {
+    color: #fff3d9;
+    font-size: 56px;
+}
+
+.menu__link--list {
+    margin-bottom: 64px;
+}
+
+.menu__list {
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.menu--open .menu__backdrop {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu--open {
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+/*  RESPONSIVE */
+
+
+@media (max-width: 1200px) {
+    .header__title {
+        padding: 0 24px;
+    }
+
+    .book {
+        width: 50%;
+    }
+
+    #features {
+        height: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .highlight__wrapper {
+        flex-direction: column;
+    }
+
+    .highlight {
+        margin-bottom: 100px;
+    }
+}
+
+
+@media (max-width: 550px) {
+    .nav__links {
+        display: none;
+    }
+
+    .btn__menu {
+        display: flex;
+    }
+
+    .highlight__wrapper {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .highlight {
+        margin-bottom: 36px;
+    }
+
+    .books {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book {
+        margin-bottom: 24px;
+    }
+
+    .book__title {
+        min-width: 150px;
+    }
+
+    #features {
+        height: 100%;
+    }
+
+    .end__title {
+        text-align: center;
+    }
+
+    .footer__list {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .header__title {
+        font-size: 36px;
+    }
+
+    .header__subtitle {
+        font-size: 22px;
+    }
+
+}
