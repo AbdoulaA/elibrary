@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="books.js"></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/book-open-reader-solid.svg"
+    />
+    <script
+      src="https://kit.fontawesome.com/f419ce33b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Alex Library ENG</title>
+    <link rel="stylesheet" href="style copy.css" />
+  </head>
+  <body>
+    <section id="landing">
+      <div class="nav__wrapper">
+        <nav>
+          <div class="nav__logo">
+            <i class="fa-solid fa-book-open-reader"></i>
+            <h2 class="nav__logo--text">Library of <br />Alexandria</h2>
+          </div>
+          <div class="nav__links">
+            <ul>
+              <li class="nav__link">
+                <a href="index.html" class="hover">Home</a>
+              </li>
+              <li class="nav__link">
+                <a href="" class="hover no-cursor">Contact</a>
+              </li>
+              <li class="nav__link">
+                <a href="./books.html" class="hover prio">Books</a>
+              </li>
+            </ul>
+          </div>
+          <button class="btn__menu" onclick="openMenu()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <ul class="menu__list">
+              <li class="menu__link--list"><a href="#landing" class="menu__link" onclick="closeMenu()">Home</a></li>
+              <li class="menu__link--list"><a href="#features" class="menu__link" onclick="closeMenu()">Books</a></li>
+              <li class="menu__link--list"><a href="" class="menu__link no-cursor" onclick="closeMenu()">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+
+      <section id="filter">
+        <div class="container">
+          <div class="row">
+            <div class="filter">
+              <h2 class="section__title">Featured <span>Books</span></h2>
+              <div class="label">
+                <label for="select" class="filter__label">Sort by:</label>
+                <select name="filter" id="book__filter" onchange="filterBooks(event)">
+                  <option value="none">None</option>
+                  <option value="high_to_low">Price, Highest to Lowest</option>
+                  <option value="low_to_high">Price, Lowest to Highest</option>
+                  <option value="rating">Rating</option>
+                </select>
+              </div>
+            </div>
+            <div class="books">
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img
+                    class="book__img"
+                    src="./assets2/atomic habits.jpg"
+                    alt=""
+                  />
+                </figure>
+                <h3 class="book__title">Atomic Habits</h3>
+                <div class="book__rating">
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star-half-stroke star"></i>
+                </div>
+                <div class="book__price">
+                  <p>£79.99</p>
+                </div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img
+                    class="book__img"
+                    src="./assets2/book-1.jpeg"
+                    alt=""
+                  />
+                </figure>
+                <h3 class="book__title">The 10x Rule</h3>
+                <div class="book__rating">
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star-half-stroke star"></i>
+                </div>
+                <div class="book__price">
+                  <p>£49.99</p>
+                </div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img
+                    class="book__img"
+                    src="./assets2/book-2.jpeg"
+                    alt=""
+                  />
+                </figure>
+                <h3 class="book__title">Be Obsessed or be Average</h3>
+                <div class="book__rating">
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-regular fa-star star"></i>
+                </div>
+                <div class="book__price">
+                  <p>£59.99</p>
+                </div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img
+                    class="book__img"
+                    src="./assets2/book-3.jpeg"
+                    alt=""
+                  />
+                </figure>
+                <h3 class="book__title">Rich Dad Poor Dad</h3>
+                <div class="book__rating">
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star-half-stroke star"></i> 
+                </div>
+                <div class="book__price">
+                  <p>£59.99</p>
+                </div>
+              </div>
+              <div class="book">
+                <figure class="book__img--wrapper">
+                  <img
+                    class="book__img"
+                    src="./assets2/book-4.jpeg"
+                    alt=""
+                  />
+              </figure>
+              <h3 class="book__title">Rich Dad's Cashflow Quadrant</h3>
+              <div class="book__rating">
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star-half-stroke star"></i>
+              </div>
+              <div class="book__price">
+                <p>£79.99</p>
+              </div>
+            </div>
+            <div class="book">
+              <figure class="book__img--wrapper">
+                <img
+                  class="book__img"
+                  src="./assets2/book-5.jpeg"
+                  alt=""
+                />
+              </figure>
+              <h3 class="book__title">The 48 Laws of Power</h3>
+              <div class="book__rating">
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star-half-stroke star"></i>
+              </div>
+              <div class="book__price">
+                <p>£49.99</p>
+              </div>
+            </div>
+            <div class="book">
+              <figure class="book__img--wrapper">
+                <img
+                  class="book__img"
+                  src="./assets2/book-6.jpeg"
+                  alt=""
+                />
+              </figure>
+              <h3 class="book__title">The 5-Second Rule</h3>
+              <div class="book__rating">
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-regular fa-star star"></i>
+              </div>
+              <div class="book__price">
+                <p>£59.99</p>
+              </div>
+            </div>
+            <div class="book">
+              <figure class="book__img--wrapper">
+                <img
+                  class="book__img"
+                  src="./assets2/book-7.jpg"
+                  alt=""
+                />
+              </figure>
+              <h3 class="book__title">Your Next Five Moves</h3>
+              <div class="book__rating">
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star-half-stroke star"></i>
+              </div>
+              <div class="book__price">
+                <p>£79.99</p>
+              </div>
+            </div>
+
+            <div class="book">
+              <figure class="book__img--wrapper">
+                <img
+                  class="book__img"
+                  src="./assets2/book-8.jpeg"
+                  alt=""
+                />
+              </figure>
+              <h3 class="book__title">Mastery</h3>
+              <div class="book__rating">
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star-half-stroke star"></i>
+              </div>
+              <div class="book__price">
+                <p>£79.99</p>
+              </div>
+            </div>
+            <div class="book">
+              <figure class="book__img--wrapper">
+                <img
+                  class="book__img"
+                  src="./assets2/crack the coding interview.png"
+                  alt=""
+                />
+              </figure>
+              <h3 class="book__title">Cracking the Coding Interview</h3>
+              <div class="book__rating">
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i >
+                <i class="fa-solid fa-star-half-stroke star"></i>
+              </div>
+              <div class="book__price">
+                <p>£49.99</p>
+              </div>
+            </div>
+            <div class="book">
+              <figure class="book__img--wrapper">
+                <img
+                  class="book__img"
+                  src="./assets2/david goggins.jpeg"
+                  alt=""
+                />
+              </figure>
+              <h3 class="book__title">Can't Hurt Me</h3>
+              <div class="book__rating">
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-regular fa-star star"></i>
+              </div>
+              <div class="book__price">
+                <p>£59.99</p>
+              </div>
+            </div>
+            <div class="book">
+              <figure class="book__img--wrapper">
+                <img
+                  class="book__img"
+                  src="./assets2/deep work.jpeg"
+                  alt=""
+                />
+              </figure>
+              <h3 class="book__title">Deep Work</h3>
+              <div class="book__rating">
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star-half-stroke star"></i>
+              </div>
+              <div class="book__price">
+                <p>£79.99</p>
+              </div>
+            </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="footer__logo">
+            <i class="fa-solid fa-book-open-reader footer__logo--img"></i>
+            <h2 class="footer__logo--text">Library of <br />Alexandria</h2>
+          </div>
+          <div class="footer__links">
+            <ul class="footer__list">
+              <li><a class="footer__link" href="#landing">Home</a></li>
+              <li><a class="footer__link" href="#highlights">About</a></li>
+              <li><a class="footer__link" href="#features">Books</a></li>
+              <li><a class="footer__link" href="">Contact</a></li>
+            </ul>
+          </div>
+          <p class="copyright">Copyright © 2022 Library of Alexandria</p>
+        </div>
+      </div>
+    </footer>
+  </body>  
+</html>
